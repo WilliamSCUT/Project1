@@ -56,6 +56,21 @@ end = time.time()
 print (end-start)
 
 ###########################################################################################
+'''from IPython.display import Image  
+from sklearn import tree
+import pydotplus 
+import os
+nlist = range(1,21)
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
+dot_data = tree.export_graphviz(clf, out_file=None, 
+                         
+                         filled=True, rounded=True,  
+                         special_characters=True)  
+graph = pydotplus.graph_from_dot_data(dot_data)  
+graph.write_png('diabetes2.png')
+Image(graph.create_png())'''
+
+###########################################################################################
 x_train,x_test,y_train,y_test=train_test_split(c,a,test_size=0.3)
 
 start = time.time()
